@@ -1,6 +1,6 @@
 import { Tabs } from "@mantine/core";
 import { jobList } from "../Data/JobsData";
-import Card from "./card";
+import Card from "./Card";
 import { useEffect, useState } from "react";
 import { getAllJobs } from "../Services/JobService";
 import { use } from "react";

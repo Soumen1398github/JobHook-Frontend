@@ -30,7 +30,7 @@
     "@tiptap/starter-kit": "^2.11.3",
     "axios": "^1.8.4",
     "dayjs": "^1.11.13",
-    "dompurify": "^3.2.3",
+    "dompurify": "^3.2.6",
     "embla-carousel-react": "^7.1.0",
     "job-portal": "file:",
     "jwt-decode": "^4.0.0",
