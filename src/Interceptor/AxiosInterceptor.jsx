@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:8080",
+  // baseURL: "http://localhost:8080",
+  baseURL: "https://jobhook-jhbj.onrender.com",
 });
 
 axiosInstance.interceptors.request.use(
@@ -17,20 +18,18 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-
-export const setupResponseInterceptor = (navigate)=>{
-    axiosInstance.interceptors.response.use(
-        (response)=>{
-            return response;
-        },
-        (error)=>{
-            if(error.response?.status===401){
-                navigate('/login');
-            }
-            return Promise.reject(error);
-        }
-    )
-
-}
+export const setupResponseInterceptor = (navigate) => {
+  axiosInstance.interceptors.response.use(
+    (response) => {
+      return response;
+    },
+    (error) => {
+      if (error.response?.status === 401) {
+        navigate("/login");
+      }
+      return Promise.reject(error);
+    }
+  );
+};
 
 export default axiosInstance;
