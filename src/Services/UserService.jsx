@@ -9,7 +9,7 @@ const registerUser = async (user) => {
 };
 const loginUser = async (login) => {
   return axiosInstance
-    .post(`/users/login`, login)
+    .post(`/auth/login`, login)
     .then((res) => res.data)
     .catch((error) => {
       throw error;
