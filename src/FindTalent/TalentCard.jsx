@@ -78,7 +78,7 @@ const jobCard = (props) => {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <div className="font-semibold text-lg">{profile?.name}</div>
+            <div className="font-semibold text-lg">{profile?.name || props.name}</div>
             <div className="text-sm text-mine-shaft-300">
               {profile?.jobTitle} &#x2022; {profile?.company}{" "}
             </div>
